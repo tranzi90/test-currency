@@ -21,7 +21,9 @@
     "postpackage": "electron-packager ./ --out=./release-builds"
   },
   "dependencies": {
+    "bootstrap": "^5.1.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.6.4",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
@@ -32,7 +34,7 @@
     "babili-webpack-plugin": "^0.1.2",
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
-    "electron": "^9.0.0",
+    "electron": "^9.4.4",
     "electron-devtools-installer": "^3.0.0",
     "electron-packager": "^14.2.1",
     "file-loader": "^6.0.0",

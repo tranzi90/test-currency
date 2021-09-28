@@ -1,11 +1,29 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { Container, Table } from "react-bootstrap"
+import CurrencyItem from "./CurrencyItem"
 
 const App = () => {
+	const [currency, setCurrency] = useState()
+
+	useEffect(() => {
+
+	}, [])
+
 	return (
-		<div className='app'>
-			<h1>React Electron Boilerplate</h1>
-			<p>This is a simple boilerplate for using React with Electron</p>
-		</div>
+		<Container>
+			<Table>
+				<thead>
+					<tr>
+						<th>Flag</th>
+						<th>Name</th>
+						<th>Rate</th>
+					</tr>
+				</thead>
+				<tbody>
+					<CurrencyItem currency={currency} key={currency.id} />
+				</tbody>
+			</Table>
+		</Container>
 	)
 }
 
