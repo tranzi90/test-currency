@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CurrencyItem = ({ flag, name, rate }) => {
+const CurrencyItem = ({ currency: { flag, name, rate } }) => {
     return (
         <tr>
-            <td> { flag } </td>
+            <td><img src={ flag } alt='' /></td>
             <td> { name } </td>
             <td> { rate } </td>
         </tr>

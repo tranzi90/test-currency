@@ -1,20 +1,20 @@
 import React from 'react'
 import {Dropdown} from "react-bootstrap"
 
-const DropdownList = () => {
+const DropdownList = ({ names, showInfo }) => {
     return (
-        <Dropdown className='select'>
+        <Dropdown className='select' onSelect={showInfo}>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
                 Выберите валюту
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">eur</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">usd</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">rub</Dropdown.Item>
+                { Object.values(names).map((name) =>
+                    <Dropdown.Item key={name} eventKey={name}> {name} </Dropdown.Item>
+                )}
             </Dropdown.Menu>
         </Dropdown>
     );
 };
 
-export default DropdownList;
+export default DropdownList
